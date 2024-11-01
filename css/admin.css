@@ -1,0 +1,2052 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+.wp-admin #adminmenu .toplevel_page_ags-layouts > div.wp-menu-image::before {
+    background-image    : url(../images/wpl-logo-20x20.png) !important;
+    background-position : center;
+    background-repeat   : no-repeat;
+    color               : rgba(0, 0, 0, 0) !important;
+}
+
+/* 
+ * 01 - Basics
+ */
+
+.ags-layouts-dialog,
+#ags-layouts-container,
+#ags-layouts-settings {
+    font-family : 'Open Sans', sans-serif !important;
+    line-height : 1.6;
+    font-weight : normal;
+    color       : #000 !important;
+    font-size   : 14px;
+}
+
+.ags-layouts-dialog a, .ags-layouts-dialog a:focus, .ags-layouts-dialog button,
+#ags-layouts-container a, #ags-layouts-container a:focus, #ags-layouts-container button,
+#ags-layouts-settings a, #ags-layouts-settings a:focus, #ags-layouts-settings button {
+    outline : none !important;
+}
+
+.ags-layouts-dialog a:focus,
+#ags-layouts-container a:focus,
+#ags-layouts-settings a:focus {
+    box-shadow : none;
+}
+
+#ags-layouts-gutenberg .inside button.aspengrove-btn-secondary {
+    display    : block;
+    text-align : center;
+    margin-top : 15px;
+    width      : 100%;
+    max-width  : 185px;
+}
+
+#ags-layouts-site-export-packager,
+#ags-import-demo-wrapper,
+.ags-layouts-settings-content {
+    padding : 30px 16px;
+}
+
+#ags-layouts-settings a {
+    text-decoration : none;
+}
+
+#ags-layouts-settings p, #ags-layouts-settings #ags-layouts-site-import p {
+    margin : 0 0 1em;
+}
+
+#ags-layouts-settings p:last-of-type {
+    margin-bottom : 0;
+}
+
+#ags-layouts-spacer {
+    display       : block;
+    margin-bottom : 30px;
+}
+
+/* Fonts */
+
+.ags-layouts-dialog button,
+.ags-layouts-dialog input,
+.ags-layouts-dialog select,
+.ags-layouts-dialog h1,
+.ags-layouts-dialog h2,
+.ags-layouts-dialog h3,
+.ags-layouts-dialog h4,
+.ags-layouts-dialog h5,
+.ags-layouts-dialog h6 {
+    font-family    : 'Open Sans', sans-serif !important;
+    text-transform : none;
+}
+
+.ags-layouts-dialog h1,
+.ags-layouts-dialog h2,
+.ags-layouts-dialog h3,
+.ags-layouts-dialog h4,
+.ags-layouts-dialog h5,
+.ags-layouts-dialog h6 {
+    line-height : 1.3 !important;
+    font-weight : 500;
+    color       : #000;
+}
+
+/* Scrollbar */
+
+.ags-layouts-dialog ::-webkit-scrollbar {
+    /* total width */
+    width            : 10px;
+    background-color : #f8f9fd;
+}
+
+.ags-layouts-dialog ::-webkit-scrollbar-track {
+    /* background of the scrollbar except button or resizer */
+    background-color : #f8f9fd;
+}
+
+.ags-layouts-dialog ::-webkit-scrollbar-track:hover {
+    background-color : #dde2e5;
+}
+
+.ags-layouts-dialog ::-webkit-scrollbar-thumb {
+    /* scrollbar itself */
+    background-color : #317873;
+    border-radius    : 16px;
+    border           : 2px solid #f8f9fd;
+}
+
+.ags-layouts-dialog ::-webkit-scrollbar-thumb:hover {
+    background-color : #317873;
+    border-color     : #dde2e5;
+}
+
+.ags-layouts-dialog ::-webkit-scrollbar-button {
+    /* set button(top and bottom of the scrollbar) */
+    display : none;
+}
+
+/* Progress Bar */
+
+.ags-layouts-gutenberg-import-block progress,
+progress#ags-layouts-import-progress,
+.ags-layouts-dialog progress {
+    display       : block;
+    width         : 100%;
+    max-width     : 350px;
+    margin        : 20px auto 0 !important;
+    padding       : 0;
+    border        : none;
+    background    : #dde2e5;
+    border-radius : 12px;
+    box-shadow    : none !important;
+    height        : 24px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio : 0) {
+    /* webkit */
+    .ags-layouts-gutenberg-import-block progress,
+    progress#ags-layouts-import-status,
+    .ags-layouts-dialog progress {
+        height : 24px;
+    }
+}
+
+.ags-layouts-gutenberg-import-block progress::-webkit-progress-bar,
+progress#ags-layouts-import-status::-webkit-progress-bar,
+.ags-layouts-dialog progress::-webkit-progress-bar {
+    background : transparent;
+}
+
+.ags-layouts-gutenberg-import-block progress::-webkit-progress-value,
+progress#ags-layouts-import-status::-webkit-progress-value,
+.ags-layouts-dialog progress::-webkit-progress-value {
+    border-radius : 12px;
+    background    : #5f9ea0;
+}
+
+.ags-layouts-gutenberg-import-block progress::-moz-progress-bar,
+progress#ags-layouts-import-status::-moz-progress-bar,
+.ags-layouts-dialog progress::-moz-progress-bar {
+    border-radius : 12px;
+    background    : #5f9ea0;
+}
+
+/* headings (Twenty Ninteen fix) */
+#ags-layouts-container h1:after, #ags-layouts-container h1:before,
+.ags-layouts-dialog h1:after, .ags-layouts-dialog h1:before,
+#ags-layouts-container h2:after, #ags-layouts-container h2:before,
+.ags-layouts-dialog h2:after, .ags-layouts-dialog h2:before {
+    display : none !important;
+}
+
+/*
+ * 02 - Form elements
+ */
+
+.ags-layouts-dialog label,
+#ags-layouts-container label,
+#ags-layouts-settings label {
+    display     : block;
+    color       : #000;
+    font-size   : 14px;
+    font-weight : 600;
+}
+
+input#ags-layouts-details-id, input#ags-layouts-details-read-key,
+.ags-layouts-dialog input#ags-layouts-details-name, #ags-layouts-container input#ags-layouts-details-name, #ags-layouts-settings input#ags-layouts-details-name,
+.ags-layouts-dialog input[type=email], #ags-layouts-container input[type=email], #ags-layouts-settings input[type=email],
+.ags-layouts-dialog input[type=number], #ags-layouts-container input[type=number], #ags-layouts-settings input[type=number],
+.ags-layouts-dialog input[type=password], #ags-layouts-container input[type=password], #ags-layouts-settings input[type=password],
+.ags-layouts-dialog input[type=search], #ags-layouts-container input[type=search], #ags-layouts-settings input[type=search], .ags-layouts-list-header input[type=search],
+.ags-layouts-dialog input[type=text], #ags-layouts-container input[type=text], #ags-layouts-settings input[type=text],
+.ags-layouts-dialog input[type=url], #ags-layouts-container input[type=url], #ags-layouts-settings input[type=url],
+.ags-layouts-dialog select, #ags-layouts-container select, #ags-layouts-settings select,
+.ags-layouts-dialog textarea, #ags-layouts-container textarea, #ags-layouts-settings textarea {
+    background-color : #fff !important;
+    border           : 1px solid #dde2e5 !important;
+    box-shadow       : none;
+    font-size        : 14px;
+    border-radius    : 4px;
+    font-weight      : normal;
+    outline          : none !important;
+}
+
+input#ags-layouts-details-id, input#ags-layouts-details-read-key,
+.ags-layouts-dialog input#ags-layouts-details-name, #ags-layouts-container input#ags-layouts-details-name, #ags-layouts-settings input#ags-layouts-details-name,
+.ags-layouts-dialog input[type=email], #ags-layouts-container input[type=email], #ags-layouts-settings input[type=email],
+.ags-layouts-dialog input[type=number], #ags-layouts-container input[type=number], #ags-layouts-settings input[type=number],
+.ags-layouts-dialog input[type=password], #ags-layouts-container input[type=password], #ags-layouts-settings input[type=password],
+.ags-layouts-dialog input[type=search], #ags-layouts-container input[type=search], #ags-layouts-settings input[type=search], .ags-layouts-list-header input[type=search],
+.ags-layouts-dialog input[type=text], #ags-layouts-container input[type=text], #ags-layouts-settings input[type=text],
+.ags-layouts-dialog input[type=url], #ags-layouts-container input[type=url], #ags-layouts-settings input[type=url] {
+    padding     : 0 16px !important;
+    height      : 36px;
+    line-height : 36px;
+}
+
+.ags-layouts-dialog textarea, #ags-layouts-container textarea, #ags-layouts-settings textarea {
+    padding : 16px !important;
+}
+
+#ags-layouts-settings input,
+#ags-layouts-container input,
+.ags-layouts-dialog input {
+    caret-color : #317873;
+}
+
+#ags-layouts-settings input[type=checkbox],
+#ags-layouts-container input[type=checkbox],
+.ags-layouts-dialog input[type=checkbox] {
+    background     : #fff;
+    border         : 1px solid #dde2e5;
+    box-shadow     : none;
+    border-radius  : 4px;
+    height         : 25px;
+    width          : 25px;
+    min-width      : 25px;
+    max-width      : 25px;
+    display        : inline-block;
+    vertical-align : bottom;
+    margin         : 0 5px 0 0;
+}
+
+#ags-layouts-settings input[type=checkbox]:disabled,
+#ags-layouts-container input[type=checkbox]:disabled,
+.ags-layouts-dialog input[type=checkbox]:disabled {
+    opacity : 0.75;
+    cursor  : not-allowed;
+}
+
+#ags-layouts-settings input[type=checkbox]:checked::before,
+#ags-layouts-container input[type=checkbox]:checked::before,
+.ags-layouts-dialog input[type=checkbox]:checked::before {
+    height  : 23px;
+    width   : 23px;
+    margin  : 0 auto;
+    content : url(../images/check.svg);
+}
+
+body #et-boc #et-fb-app .ags-layouts-dialog input[type="radio"],
+#elementor-template-library-modal ul.ags-layouts-elem-save-options input[type="radio"],
+#ags-layouts-settings input[type="radio"],
+#ags-layouts-container input[type="radio"],
+.ags-layouts-dialog input[type="radio"] {
+    background-color   : transparent;
+    border             : none;
+    border-radius      : 50%;
+    box-shadow         : inset 0 0 0 1.5px #dde2e5;
+    cursor             : pointer !important;
+    font               : inherit;
+    height             : 20px;
+    outline            : none;
+    width              : 20px;
+    -moz-appearance    : none;
+    -webkit-appearance : none;
+    margin-right       : 10px;
+    display            : inline-block;
+    vertical-align     : text-bottom;
+    padding            : 0 !important;
+}
+
+body #et-boc #et-fb-app .ags-layouts-dialog input[type="radio"]:checked,
+#elementor-template-library-modal ul.ags-layouts-elem-save-options input[type="radio"]:checked,
+#ags-layouts-settings input[type="radio"]:checked,
+#ags-layouts-container input[type="radio"]:checked,
+.ags-layouts-dialog input[type="radio"]:checked {
+    background-color   : white;
+    box-shadow         : inset 0 0 0 6.5px #317873;
+    -webkit-transition : background .15s, box-shadow .1s;
+    transition         : background .15s, box-shadow .1s;
+}
+
+body #et-boc #et-fb-app .ags-layouts-dialog input[type="radio"]:checked:before,
+#elementor-template-library-modal ul.ags-layouts-elem-save-options input[type="radio"]:checked:before,
+#ags-layouts-settings input[type="radio"]:checked:before,
+#ags-layouts-container input[type="radio"]:checked:before,
+.ags-layouts-dialog input[type="radio"]:checked:before {
+    display : none !important;
+}
+
+#ags-layouts-settings select,
+#ags-layouts-container select,
+.ags-layouts-dialog select {
+    /* remove default arrow */
+    -webkit-appearance  : none;
+    -moz-appearance     : none;
+    appearance          : none;
+    outline             : none !important;
+    background-image    : url(../images/chevron-down.svg);
+    background-repeat   : no-repeat;
+    background-position : center right;
+    background-size     : 24px;
+    padding             : 0 25px 0 16px !important;
+    height              : 36px;
+    line-height         : 35px;
+}
+
+
+#ags-layouts-settings input[type=file] {
+    font-weight : normal;
+    outline     : none !important;
+    width       : auto;
+}
+
+/*
+ * 03 - Buttons
+ */
+
+.aspengrove-btn-primary,
+.aspengrove-btn-secondary,
+.aspengrove-btn-third,
+#ags-demo-importer-form .button-primary {
+    border-radius      : 4px;
+    border             : 2px solid;
+    box-shadow         : none;
+    font-weight        : 600;
+    text-align         : center;
+    font-size          : 15px;
+    cursor             : pointer;
+    line-height        : 1.3;
+    padding            : 8px 18px;
+    outline            : none;
+    -webkit-transition : all ease-in .2s;
+    transition         : all ease-in .2s;
+    text-decoration    : none;
+    text-shadow        : none;
+}
+
+.aspengrove-btn-primary,
+.aspengrove-btn-secondary,
+#ags-demo-importer-form .button-primary {
+    border-color : #317873 !important
+}
+
+.aspengrove-btn-primary {
+    color            : #fff !important;
+    background-color : #317873 !important;
+}
+
+#ags-demo-importer-form .button-primary,
+.aspengrove-btn-secondary {
+    color            : #000000 !important;
+    background-color : transparent !important;
+}
+
+.aspengrove-btn-third {
+    color            : #317873 !important;
+    background-color : #dee9e8 !important;
+    border-color     : #dee9e8 !important
+}
+
+.aspengrove-btn-primary:hover,
+.aspengrove-btn-secondary:hover,
+.aspengrove-btn-third:hover,
+#ags-demo-importer-form .button-primary:hover {
+    -moz-box-shadow    : 0 2px 13px 4px rgba(49, 120, 115, 0.35);
+    -webkit-box-shadow : 0 2px 13px 4px rgba(49, 120, 115, 0.35);
+    box-shadow         : 0 2px 13px 4px rgba(49, 120, 115, 0.35);
+    background-color   : #5f9ea0 !important;
+    border-color       : #5f9ea0 !important;
+    color              : #fff !important;
+}
+
+.ags-layouts-dialog-buttons button {
+    margin-bottom : 10px;
+    margin-right  : 15px;
+}
+
+.ags-layouts-dialog-buttons button:last-child {
+    margin-right : 0;
+}
+
+.aspengrove-btn-add {
+    border-radius      : 4px;
+    font-weight        : 600;
+    text-align         : center;
+    font-size          : 15px;
+    cursor             : pointer;
+    position           : relative;
+    line-height        : 1.3;
+    padding            : 8px 15px 8px 45px;
+    outline            : none;
+    -webkit-transition : all ease-in .2s;
+    transition         : all ease-in .2s;
+    color              : #317873;
+    border             : none;
+    background-color   : #dee9e8;
+}
+
+.aspengrove-btn-add:before {
+    content             : '';
+    width               : 30px;
+    height              : 100%;
+    border-radius       : 4px;
+    background-color    : #317873;
+    background-image    : url(../images/icon-layout-add-white.svg);
+    background-repeat   : no-repeat;
+    background-size     : 23px;
+    background-position : center;
+    position            : absolute;
+    top                 : 0;
+    left                : 0;
+    -webkit-transition  : all ease-in .2s;
+    transition          : all ease-in .2s;
+}
+
+.aspengrove-btn-add:hover {
+    background-color : #cfdfdd;
+}
+
+/*
+ * 04 - Datatable
+ */
+
+.ags-layouts-dialog .ags-layouts-table table.dataTable {
+    table-layout : fixed;
+}
+
+.ags-layouts-table table.dataTable,
+body #et-boc #et-fb-app .ags-layouts-table table.dataTable {
+    border          : none !important;
+    border-collapse : collapse !important;
+    margin          : 10px auto;
+    width           : 100% !important;
+}
+
+.ags-layouts-table table.dataTable thead th,
+.ags-layouts-table table.dataTable thead td,
+body #et-boc #et-fb-app .ags-layouts-table table.dataTable thead th,
+body #et-boc #et-fb-app .ags-layouts-table table.dataTable thead td {
+    border         : none !important;
+    color          : #000;
+    opacity        : 0.38;
+    font-size      : 11px;
+    font-weight    : bold;
+    text-transform : uppercase;
+    text-align     : left;
+    padding        : 10px !important;
+}
+
+.ags-layouts-table table.dataTable tbody td,
+body #et-boc #et-fb-app .ags-layouts-table table.dataTable tbody td {
+    border-width : 0 0 1px 0 !important;
+    border-style : solid;
+    border-color : rgba(221, 226, 229, 0.54);
+    font-weight  : 600;
+}
+
+.ags-layouts-table table.dataTable tbody tr:last-child td,
+body #et-boc #et-fb-app .ags-layouts-table table.dataTable tbody tr:last-child td {
+    border : none;
+}
+
+body #et-boc #et-fb-app .ags-layouts-table table.dataTable tr,
+.ags-layouts-table table.dataTable tr {
+    border : none;
+}
+
+/* Datatables scroll */
+
+.ags-layouts-table .dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border        : none !important;
+    overflow-x    : hidden !important;
+    margin-bottom : 10px;
+}
+
+.ags-layouts-table .dataTables_scroll .dataTables_scrollHead,
+.ags-layouts-table .dataTables_scroll .dataTables_scrollHeadInner {
+    width : 100% !important;
+}
+
+
+/* Display Table */
+
+.ags-layouts-table.ags-layouts-display-table tbody tr {
+    background-color : #fff;
+}
+
+.ags-layouts-table.ags-layouts-display-table tbody > tr.selected,
+.ags-layouts-table.ags-layouts-display-table > tr > .selected {
+    background-color : #F0F9F3 !important;
+}
+
+.ags-layouts-table.ags-layouts-display-table tbody tr td {
+    text-align : left;
+}
+
+.ags-layouts-table.ags-layouts-display-table tbody > tr.selected td,
+.ags-layouts-table.ags-layouts-display-table > tr > .selected td {
+    color : #317873 !important;
+}
+
+body #et-boc #et-fb-app .ags-layouts-table.ags-layouts-display-table .dataTables_scrollBody thead,
+.ags-layouts-table.ags-layouts-display-table .dataTables_scrollBody thead {
+    display : none !important;
+}
+
+/* Display Grid */
+
+body #et-boc #et-fb-app .ags-layouts-table.ags-layouts-display-grid .dataTables_scrollHead,
+.ags-layouts-table.ags-layouts-display-grid .dataTables_scrollHead,
+body #et-boc #et-fb-app .ags-layouts-table.ags-layouts-display-grid thead,
+.ags-layouts-table.ags-layouts-display-grid thead {
+    /* fix tbody wrapping on browser resize */
+    display : none !important
+}
+
+body #et-boc #et-fb-app .ags-layouts-table.ags-layouts-display-grid tbody,
+.ags-layouts-table.ags-layouts-display-grid tbody {
+    display  : block;
+    overflow : auto;
+}
+
+.ags-layouts-table.ags-layouts-display-grid tbody tr,
+.ags-layouts-table.ags-layouts-display-grid tbody td {
+    background-color : transparent !important;
+    display          : block;
+    padding          : 0;
+}
+
+/* Empty Table */
+
+/* table.dataTable tbody tr {
+	background-color: transparent !important;
+}*/
+
+
+/*
+ * 05 - Table Layout View
+ */
+
+body #et-boc #et-fb-app .ags-layouts-table.ags-layouts-display-table table.dataTable tbody tr,
+.ags-layouts-table.ags-layouts-display-table table.dataTable tbody tr {
+    padding       : 0;
+    border        : 1px solid rgba(221, 226, 229, 0.54);
+    transition    : all .3s linear;
+    background    : #fff;
+    border-radius : 4px !important;
+}
+
+.ags-layouts-table.ags-layouts-display-table table.dataTable tbody td {
+    padding : 13px 10px;
+    cursor  : pointer;
+}
+
+.ags-layouts-table.ags-layouts-display-table table.dataTable tbody td:first-child {
+    padding-left : 20px;
+    color        : #000;
+    font-weight  : 600;
+    font-size    : 14px;
+}
+
+.ags-layouts-table.ags-layouts-display-table table.dataTable tbody tr:hover td:first-child {
+    color : #317873;
+}
+
+body #et-boc #et-fb-app .ags-layouts-table.ags-layouts-display-table table.dataTable tbody td:last-child,
+.ags-layouts-table.ags-layouts-display-table table.dataTable tbody td:last-child {
+    text-align : right;
+}
+
+body #et-boc #et-fb-app .ags-layouts-table.ags-layouts-display-table tr th:last-child,
+.ags-layouts-table.ags-layouts-display-table tr th:last-child {
+    text-align : right;
+}
+
+/*
+ * 06 - Grid Layout View
+ */
+
+body #et-boc #et-fb-app .ags-layouts-collection-layouts,
+.ags-layouts-collection-layouts {
+    width       : 100%;
+    white-space : nowrap;
+    overflow-x  : auto;
+    max-height  : 500px;
+}
+
+body #et-boc #et-fb-app .ags-layouts-list-grid,
+body #et-boc #et-fb-app .ags-layouts-collection-layouts,
+.ags-layouts-list-grid,
+.ags-layouts-collection-layouts {
+    display         : flex;
+    flex-wrap       : wrap;
+    justify-content : flex-start;
+    margin          : 0;
+    list-style-type : none !important;
+    padding         : 0;
+}
+
+.ags-layouts-list-grid > li,
+.ags-layouts-collection-layouts > li,
+body #et-boc #et-fb-app .ags-layouts-list-grid > li,
+body #et-boc #et-fb-app .ags-layouts-collection-layouts > li {
+    background    : #fff;
+    border-radius : 4px;
+    border        : 1px solid rgb(229, 231, 232);
+    margin        : 10px 10px 20px;
+    max-width     : calc(100% / 3 - 22px);
+    width         : calc(100% / 3 - 22px);
+    position      : relative;
+    overflow      : hidden;
+    cursor        : pointer;
+    transition    : box-shadow 0.3s ease-in-out;
+}
+
+.ags-layouts-collection-layouts > li:hover,
+.ags-layouts-list-grid > li:hover {
+    -moz-box-shadow    : 0 7px 10px 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow : 0 7px 10px 0 rgba(0, 0, 0, 0.08);
+    box-shadow         : 0 7px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+body #et-boc #et-fb-app .ags-layouts-item-image,
+.ags-layouts-item-image {
+    width               : 100%;
+    height              : 170px;
+    display             : block;
+    background-size     : cover;
+    background-position : top center;
+    background-repeat   : no-repeat;
+    transition          : background-position 3s ease-in-out;
+}
+
+body #et-boc #et-fb-app .ags-layouts-collection-layouts > li:hover .ags-layouts-item-image,
+body #et-boc #et-fb-app .ags-layouts-list-grid > li:hover .ags-layouts-item-image,
+.ags-layouts-collection-layouts > li:hover .ags-layouts-item-image,
+.ags-layouts-list-grid > li:hover .ags-layouts-item-image {
+    background-position : bottom center;
+}
+
+body #et-boc #et-fb-app .ags-layouts-collection-layouts > li.ags-layouts-no-image .ags-layouts-item-image,
+body #et-boc #et-fb-app .ags-layouts-list-grid > li.ags-layouts-no-image .ags-layouts-item-image,
+.ags-layouts-collection-layouts > li.ags-layouts-no-image .ags-layouts-item-image,
+.ags-layouts-list-grid > li.ags-layouts-no-image .ags-layouts-item-image,
+#ags-layouts-details-image.ags-layouts-no-image {
+    background-color    : #ddd;
+    background-position : center !important;
+    background-size     : 90px auto !important;
+    background-repeat   : no-repeat;
+    background-image    : url(../images/no-thumb.svg) !important;
+    transition          : none !important;
+}
+
+@media (min-width : 980px) {
+    .ags-layouts-list-grid > li,
+    .ags-layouts-collection-layouts > li,
+    body #et-boc #et-fb-app .ags-layouts-list-grid > li,
+    body #et-boc #et-fb-app .ags-layouts-collection-layouts > li {
+        max-width : calc(100% / 4 - 22px);
+        width     : calc(100% / 4 - 22px);
+    }
+}
+
+.ags-layouts-list-grid > li.ags-layout-collection-link {
+    -moz-box-shadow    : 0 3px 9px rgba(0, 0, 0, .08), 0 14px 0 -7px #fff, 0 14px 9px -6px rgba(0, 0, 0, .08), 0 25px 0 -12px #fff, 0 25px 9px -11px rgba(0, 0, 0, .08);
+    -webkit-box-shadow : 0 3px 9px rgba(0, 0, 0, .08), 0 14px 0 -7px #fff, 0 14px 9px -6px rgba(0, 0, 0, .08), 0 25px 0 -12px #fff, 0 25px 9px -11px rgba(0, 0, 0, .08);
+    box-shadow         : 0 3px 9px rgba(0, 0, 0, .08), 0 14px 0 -7px #fff, 0 14px 9px -6px rgba(0, 0, 0, .08), 0 25px 0 -12px #fff, 0 25px 9px -11px rgba(0, 0, 0, .08);
+}
+
+.ags-layouts-list-grid > li.ags-layout-collection-link:hover {
+    -moz-box-shadow    : 0 5px 30px rgba(0, 0, 0, .08), 0 16px 0 -9px #fff, 0 16px 30px -8px rgba(0, 0, 0, .08), 0 27px 0 -14px #fff, 0 27px 30px -13px rgba(0, 0, 0, .08);
+    -webkit-box-shadow : 0 5px 30px rgba(0, 0, 0, .08), 0 16px 0 -9px #fff, 0 16px 30px -8px rgba(0, 0, 0, .08), 0 27px 0 -14px #fff, 0 27px 30px -13px rgba(0, 0, 0, .08);
+    box-shadow         : 0 5px 30px rgba(0, 0, 0, .08), 0 16px 0 -9px #fff, 0 16px 30px -8px rgba(0, 0, 0, .08), 0 27px 0 -14px #fff, 0 27px 30px -13px rgba(0, 0, 0, .08);
+}
+
+.ags-layouts-list-grid .ags-layouts-item-details,
+.ags-layouts-collection-layouts .ags-layouts-item-details,
+body #et-boc #et-fb-app .ags-layouts-list-grid .ags-layouts-item-details,
+body #et-boc #et-fb-app .ags-layouts-collection-layouts .ags-layouts-item-details {
+    display     : block;
+    text-align  : left;
+    padding     : 15px 40px 15px 20px;
+    width       : 100%;
+    box-sizing  : border-box;
+    font-weight : 600;
+    color       : #000;
+    font-size   : 14px;
+    position    : relative;
+}
+
+.ags-layouts-list-grid .ags-layouts-grid-item-selected {
+    background-color : #F0F9F3 !important;
+}
+
+.ags-layouts-list-grid .ags-layouts-grid-item-selected .ags-layouts-item-details {
+    color : #317873;
+}
+
+.ags-layout-import-location-options > label {
+    display : block;
+}
+
+#ags-layouts-screenshot-frame {
+    width       : 1400px;
+    margin-left : -2800px;
+    height      : 10px;
+    opacity     : 0;
+    min-width   : 1400px
+}
+
+.html2canvas-container {
+    visibility : visible !important;
+}
+
+/*
+ * Collection View
+ */
+
+.ags-layouts-dialog-page-import-collection {
+
+}
+
+/*
+ * 07 - Empty Table
+ */
+
+body #et-boc #et-fb-app .ags-layouts-table .ags-layouts-list-grid-empty,
+body #et-boc #et-fb-app .ags-layouts-table table.dataTable td.dataTables_empty,
+.ags-layouts-table .ags-layouts-list-grid-empty,
+.ags-layouts-table table.dataTable td.dataTables_empty {
+    text-align          : center !important;
+    font-size           : 22px !important;
+    color               : #929698 !important;
+    background-image    : url(../images/empty-layouts.svg);
+    background-repeat   : no-repeat;
+    background-size     : 37px 77px;
+    font-weight         : normal !important;
+    padding-top         : 105px !important;
+    background-position : center 15px;
+}
+
+
+body #et-boc #et-fb-app .ags-layouts-table table.dataTable td.dataTables_empty,
+.ags-layouts-table table.dataTable td.dataTables_empty {
+    padding-bottom : 25px !important;
+    cursor         : default !important;
+}
+
+/*
+ * 08 - Layout Collection View
+ */
+
+/*  Hide it or not?
+
+.ags-layouts-collection-info img {
+    max-width: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+.ags-layouts-collection-has-image .ags-layouts-collection-description {
+    padding-left: 320px;
+}*/
+
+.ags-layouts-collection-view .ags-layouts-button-back-container {
+    border-bottom : 1px solid #dde2e5;
+    padding       : 20px 0;
+}
+
+.ags-layouts-collection-view .ags-layouts-collection-info {
+    padding    : 25px 10px 20px;
+    text-align : center;
+}
+
+.ags-layouts-collection-info img {
+    display : none;
+}
+
+.ags-layouts-collection-view .ags-layouts-collection-info h3 {
+    font-size     : 19px;
+    font-weight   : 600;
+    margin-bottom : 20px;
+}
+
+.ags-layouts-collection-has-image .ags-layouts-collection-description {
+    line-height : 1.7;
+}
+
+/*
+ * 09- Import Layout View
+ */
+
+.ags-layouts-dialog-buttons {
+    margin-top    : 20px;
+    margin-bottom : 20px;
+    display       : block;
+    position      : relative;
+    text-align    : center;
+}
+
+/*.ags-layouts-dialog-page-import-list .ags-layouts-dialog-tabs,*/
+.ags-layouts-dialog-page-import-collection .ags-layouts-dialog-tabs,
+.ags-layouts-dialog-page-import-progress .ags-layouts-dialog-tabs,
+.ags-layouts-dialog-page-import-options .ags-layouts-dialog-tabs {
+    display : none;
+}
+
+/*.ags-layouts-dialog-page-import-list .ags-layouts-dialog-tab-content,*/
+.ags-layouts-dialog-page-import-progress .ags-layouts-dialog-content,
+.ags-layouts-dialog-page-import-options .ags-layouts-dialog-content,
+.ags-layouts-dialog-page-import-progress .ags-layouts-dialog-tab-content,
+.ags-layouts-dialog-page-import-options .ags-layouts-dialog-tab-content {
+    max-width  : 550px;
+    margin     : 30px auto !important;
+    text-align : center !important;
+    font-size  : 15px;
+}
+
+/*.ags-layouts-dialog-page-import-list .ags-layouts-dialog-tab-content h4,*/
+.ags-layouts-dialog-page-import-progress h4,
+.ags-layouts-dialog-page-import-options .ags-layouts-dialog-tab-content h4,
+.ags-layouts-dialog-page-import-options .ags-layouts-dialog-content h4 {
+    font-size     : 19px;
+    font-weight   : 400;
+    margin-bottom : 15px !important;
+}
+
+#ags-layouts-import-status {
+
+}
+
+.ags-layout-import-location-options {
+    text-align : center;
+}
+
+.ags-layout-import-location-options label {
+    margin-bottom : 20px !important;
+    font-weight   : normal;
+    font-size     : 15px;
+}
+
+/*
+ * 10 - Export Layout View
+ */
+
+.ags-layouts-dialog-page-export-progress .ags-layouts-dialog-content,
+.ags-layouts-dialog-page-export-options .ags-layouts-dialog-content {
+    margin     : 30px auto 0 !important;
+    text-align : center;
+    font-size  : 15px;
+}
+
+.ags-layouts-dialog-page-export-options .ags-layouts-dialog-content {
+    max-width : 500px;
+}
+
+.ags-layouts-dialog-page-export-options .ags-layouts-dialog-content h4 {
+    font-size   : 17px;
+    font-weight : 400;
+}
+
+.ags-layouts-dialog-page-export-options input[type="text"] {
+    display   : block;
+    width     : 100%;
+    max-width : 400px;
+    margin    : 0 auto;
+    height    : 45px;
+}
+
+.ags-layouts-dialog-page-export-progress .ags-layouts-export-warnings {
+    overflow    : auto;
+    white-space : nowrap;
+    margin      : 30px auto 20px;
+    font-size   : 12px;
+    min-height  : 100px;
+    padding     : 10px;
+    border      : 1px solid #ccc;
+    width       : 95%;
+}
+
+.ags-layouts-dialog-page-export-progress .ags-layouts-dialog-content a {
+    color : #317873;
+}
+
+/*
+ * 11 - Settings
+ */
+
+#ags-layouts-settings {
+    margin                : 40px 10px;
+    width                 : 97%;
+    max-width             : 1700px;
+    border-radius         : 4px;
+    -moz-border-radius    : 4px;
+    -webkit-border-radius : 4px;
+    box-shadow            : 0 2px 7px 0 rgba(0, 0, 0, 0.08);
+    font-weight           : normal;
+    -webkit-transition    : all ease-in .3s;
+    transition            : all ease-in .3s;
+    background-color      : #f8f9fd;
+}
+
+#ags-layouts-settings-account {
+    padding : 16px 16px 24px;
+}
+
+#ags-layouts-settings h2 {
+    /*font-size: 25px;*/
+    /*font-weight: 400;*/
+    /*background: #317873;*/
+    /*color: #fff;*/
+    /*padding: 10px 15px;*/
+    /*margin: 0 -20px 35px;*/
+}
+
+#ags-layouts-settings form label {
+    text-align : left;
+    cursor     : default;
+}
+
+#ags-layouts-settings form label > input {
+    display    : block;
+    margin-top : 5px;
+    width      : 100%;
+}
+
+#ags-layouts-login-buttons #ags-layouts-password-reset-link {
+    margin-right : 30px;
+    color        : #317873;
+    box-shadow   : none;
+}
+
+/*
+ * 11.1 - Settings Tabs
+ */
+
+#ags-layouts-settings-tabs {
+    margin        : 16px;
+    padding       : 10px 0;
+    display       : flex;
+    flex-wrap     : nowrap;
+    align-items   : center;
+    border-bottom : 1px solid #dde2e5;
+}
+
+#ags-layouts-settings-tabs li {
+    margin-right : 20px;
+}
+
+#ags-layouts-settings-tabs a {
+    background-color   : transparent !important;
+    border-width       : 0;
+    border-style       : solid;
+    border-color       : #317873;
+    font-size          : 15px;
+    opacity            : 0.38;
+    color              : #000;
+    cursor             : pointer;
+    padding            : 6px 8px;
+    outline            : none;
+    text-decoration    : none;
+    -webkit-transition : all ease-in .3s;
+    transition         : all ease-in .3s;
+    box-shadow         : none;
+}
+
+#ags-layouts-settings-tabs a.tab-active {
+    border-bottom-width : 2px;
+    font-weight         : 600;
+    opacity             : 1;
+}
+
+/*
+ * 11.2 - Settings Header
+ */
+
+#ags-layouts-settings-header {
+    background      : #317873;
+    position        : relative;
+    padding         : 16px 23px;
+    justify-content : space-between;
+    display         : flex;
+    flex-wrap       : wrap;
+}
+
+#ags-layouts-settings-header h1 {
+    margin      : 0;
+    color       : #fff;
+    font-size   : 24px;
+    font-weight : normal;
+}
+
+#ags-layouts-settings-header-links a {
+    text-decoration     : none;
+    color               : #ffffff;
+    font-size           : 14px;
+    opacity             : 0.54;
+    font-weight         : 600;
+    margin-left         : 20px;
+    padding             : 8px 16px 8px 40px;
+    display             : inline-block;
+    border-radius       : 4px;
+    background-size     : 28px;
+    background-repeat   : no-repeat;
+    background-position : 7px center;
+    box-shadow          : none;
+}
+
+#ags-layouts-settings-header-link-settings {
+    background-image : url(../images/settings.svg);
+}
+
+#ags-layouts-settings-header-link-support {
+    background-image : url(../images/help.svg);
+}
+
+#ags-layouts-settings-header-links a:hover {
+    opacity : 1;
+}
+
+#ags-layouts-settings-header-links a.active {
+    opacity          : 1;
+    background-color : #5f9ea0;
+}
+
+/*
+ * 12 - Layouts Admin Page
+ */
+
+#ags-layouts-loader-overlay {
+    position            : absolute;
+    left                : 0;
+    top                 : 0;
+    width               : 100%;
+    height              : 100%;
+    box-sizing          : border-box;
+    background-color    : rgba(240, 240, 240, 0.6);
+    z-index             : 999999;
+    transition          : all .02s ease-in-out;
+    background-image    : url(../images/loader.gif) !important;
+    background-size     : 100px;
+    background-position : center 150px;
+    min-height          : 300px;
+    background-repeat   : no-repeat
+}
+
+#ags-layouts-container {
+    padding     : 16px 16px 30px;
+    position    : relative;
+    display     : flex;
+    flex-wrap   : nowrap;
+    align-items : flex-start;
+    transition  : all .02s ease-in-out;
+}
+
+#ags-layouts-container #ags-layouts-list-container,
+#ags-layouts-container #ags-layouts-details {
+    flex-grow  : 1;
+    transition : all 1s ease-in-out;
+}
+
+#ags-layouts-container #ags-layouts-list-container {
+    min-height : 300px;
+}
+
+#ags-layouts-list-container table.dataTable {
+    margin-bottom : 15px !important;
+}
+
+/* AGS Layout details */
+
+#ags-layouts-details {
+    position     : -webkit-sticky;
+    position     : sticky;
+    top          : 0;
+    padding-left : 30px;
+    padding-top  : 58px;
+    min-width    : 240px;
+    max-width    : 300px;
+}
+
+#ags-layouts-container .ags-layouts-details-none {
+    display : none;
+}
+
+#ags-layouts-details input {
+    display : block;
+    width   : 100%;
+    margin  : 3px 0 0;
+}
+
+#ags-layouts-details label {
+    margin-bottom : 10px;
+}
+
+#ags-layouts-details-image {
+    width               : 100%;
+    height              : 200px;
+    background-color    : #ddd;
+    background-size     : cover;
+    background-position : top center;
+    background-repeat   : no-repeat;
+    transition          : background-position 2s ease-in-out;
+    margin-bottom       : 25px;
+    border-radius       : 4px;
+    border              : 1px solid rgb(229, 231, 232);
+}
+
+#ags-layouts-details-image:hover {
+    background-position : bottom center;
+}
+
+#ags-layouts-details-read-key-buttons,
+#ags-layouts-details #ags-layouts-details-buttons {
+    text-align : center;
+    margin     : 5px auto 10px;
+}
+
+#ags-layouts-details-read-key-buttons button,
+#ags-layouts-details #ags-layouts-details-buttons button,
+#ags-layouts-details a[class^="aspengrove-btn"] {
+    min-width : 90px;
+    display   : inline-block;
+    margin    : 5px;
+}
+
+/*
+ * 13 - Live Preview Button
+ */
+
+.ags-layouts-preview-link {
+    color           : #317873 !important;
+    font-weight     : 500;
+    text-decoration : none;
+}
+
+.ags-layouts-preview-link:hover {
+    color : inherit;
+}
+
+/* Grid View */
+
+body #et-boc #et-fb-app .ags-layout-collection-link .ags-layouts-preview-link,
+.ags-layout-collection-link .ags-layouts-preview-link,
+body #et-boc #et-fb-app .ags-layouts-list-grid .ags-layouts-preview-link,
+.ags-layouts-list-grid .ags-layouts-preview-link {
+    position            : absolute;
+    height              : 35px;
+    width               : 35px;
+    border-radius       : 50%;
+    right               : 10px;
+    top                 : -17.5px;
+    font-size           : 0;
+    background-color    : #fff;
+    background-image    : url(../images/search-lightgreen.svg) !important;
+    background-size     : contain;
+    background-position : center;
+    background-repeat   : no-repeat;
+}
+
+body #et-boc #et-fb-app .ags-layout-collection-link .ags-layouts-preview-link:hover,
+.ags-layout-collection-link .ags-layouts-preview-link:hover,
+body #et-boc #et-fb-app .ags-layouts-list-grid .ags-layouts-preview-link:hover,
+.ags-layouts-list-grid .ags-layouts-preview-link:hover {
+    box-shadow : 0 2px 13px 4px rgba(49, 120, 115, 0.35);
+}
+
+/* Table View */
+
+body #et-boc #et-fb-app .ags-layouts-display-table .ags-layouts-preview-link,
+.ags-layouts-display-table .ags-layouts-preview-link {
+    position      : relative;
+    padding       : 5px 9px 5px 25px;
+    border-radius : 3px;
+    font-size     : 14px;
+    background    : #f0f9f3;
+}
+
+body #et-boc #et-fb-app .ags-layouts-display-table .ags-layouts-preview-link:hover,
+.ags-layouts-display-table .ags-layouts-preview-link:hover {
+    color      : #fff !important;
+    background : #317873;
+}
+
+.ags-layouts-display-table .ags-layouts-preview-link:before {
+    content             : '';
+    position            : absolute;
+    height              : 26px;
+    width               : 26px;
+    left                : 0;
+    top                 : 50%;
+    margin-top          : -13px;
+    font-size           : 0;
+    background-image    : url(../images/search-lightgreen.svg) !important;
+    background-size     : contain;
+    background-position : center;
+    background-repeat   : no-repeat;
+}
+
+
+/*
+ * 14 -  Notifications
+ */
+
+.ags-layouts-notification {
+    margin           : 0 0 20px !important;
+    border-radius    : 3px;
+    padding          : 10px 20px !important;
+    border-left      : 5px solid;
+    border-color     : #317873;
+    background-color : #eaf2f1;
+}
+
+.ags-layouts-notification a {
+    font-weight : bold;
+}
+
+.ags-layouts-notification-info {
+    border-color     : #317873;
+    background-color : #eaf2f1;
+}
+
+.ags-layouts-notification-info a {
+    color : #317873;
+}
+
+.ags-layouts-notification.ags-layouts-notification-error {
+    border-color     : #d0021b;
+    background-color : #fae6e8;
+}
+
+.ags-layouts-notification.ags-layouts-notification-error a {
+    color : #d0021b;
+}
+
+.ags-layouts-notification-success {
+    border-color     : #a0d6b4;
+    background-color : #f0f9f3;
+}
+
+.ags-layouts-notification-success a {
+    color : #317873;
+}
+
+.ags-layouts-notification-warning {
+    border-color     : #ffae00;
+    background-color : #fff4d7;
+}
+
+.ags-layouts-notification-warning a {
+    color : #ffae00;
+}
+
+/*
+ * 15 -  PRO notice
+ */
+
+body #et-boc #et-fb-app .et-fb-tooltip-modal .ags-layouts-dialog .ags-layouts-no-collections-access,
+.ags-layouts-no-collections-access {
+    padding      : 30px 0;
+    max-width    : 630px;
+    text-align   : center;
+    margin-left  : auto;
+    margin-right : auto;
+}
+
+body #et-boc #et-fb-app .et-fb-tooltip-modal .ags-layouts-dialog .ags-layouts-no-collections-access h4,
+.ags-layouts-no-collections-access h4 {
+    font-size      : 21px;
+    font-weight    : 600;
+    padding-bottom : 0;
+    margin-bottom  : 15px;
+}
+
+body #et-boc #et-fb-app .et-fb-tooltip-modal .ags-layouts-dialog .ags-layouts-no-collections-access p,
+.ags-layouts-no-collections-access p {
+    font-size : 16px;
+}
+
+body #et-boc #et-fb-app .et-fb-tooltip-modal .ags-layouts-dialog .ags-layouts-no-collections-access a,
+.ags-layouts-no-collections-access a {
+    color           : #317873;
+    font-weight     : bold;
+    text-decoration : none;
+}
+
+body #et-boc #et-fb-app .et-fb-tooltip-modal .ags-layouts-dialog .ags-layouts-no-collections-access a:hover,
+.ags-layouts-no-collections-access a:hover {
+    color : #5f9ea0;
+}
+
+/*
+ * 16 -  Preview Fixed Bar
+ */
+
+.ags_layouts_preview_notice {
+    color            : #fff;
+    background-color : #317873;
+    padding          : 15px 8px;
+    font-size        : 15px;
+    text-align       : center;
+    position         : fixed;
+    bottom           : 0;
+    width            : 100%;
+    left             : 0;
+    z-index          : 99999999;
+}
+
+.ags_layouts_preview_notice strong {
+    font-weight : bold;
+}
+
+/* Beaver */
+
+.ags-layouts-preview-beaverbuilder {
+    margin-bottom : 52px !important;
+}
+
+/* Elementor */
+
+.ags-layouts-preview-elementor #elementor-editor-wrapper {
+    margin-bottom : 45px;
+    height        : calc(100% - 45px);
+    position      : relative;
+    overflow      : hidden;
+}
+
+/* Divi Builder */
+
+.ags-layouts-preview-divi .et-fb-page-settings-bar,
+.ags-layouts-preview-divi .et-db body #et-boc #et-fb-app .et_pb_root--vb .et-fb-page-settings-bar {
+    bottom : 52px !important;
+}
+
+/* Gutenberg */
+
+.ags-layouts-preview-gutenberg {
+    margin-bottom : 52px !important;
+}
+
+/*  ---------------------------------------------------------------- */
+/*             Divi Visual Builder & Theme Builder
+/*  ---------------------------------------------------------------- */
+
+.et-tb-modal-root .ags-layouts-dialog .ags-layouts-dialog-header,
+body #et-boc #et-fb-app .et-fb-tooltip-modal .ags-layouts-dialog .ags-layouts-dialog-header {
+    display : none;
+}
+
+.et-tb-modal-root .ags-layouts-dialog,
+.et-fb-settings .ags-layouts-dialog {
+    background : transparent;
+}
+
+.et-tb-modal-root .ags-layouts-dialog-loader-overlay,
+body #et-boc #et-fb-app .et-fb-settings .ags-layouts-dialog-loader-overlay {
+    background-color : rgba(255, 255, 255, 0.75) !important;
+}
+
+/* ???????
+.et-fb-modal-settings--ags-layouts .ags-layouts-dialog,
+.et-fb-modal-settings--ags-layouts-my .ags-layouts-dialog {
+	padding-top: 42px;
+}*/
+
+.et-tb-modal-root .ags-layouts-dialog-page-import-list,
+body #et-boc #et-fb-app .et-fb-settings .ags-layouts-dialog-page-import-list {
+    padding : 20px;
+}
+
+/*.et-fb-settings .ags-layouts-dialog-page-import-collection,*/
+body #et-boc #et-fb-app .et-fb-settings .ags-layouts-dialog-page-import-progress,
+body #et-boc #et-fb-app .et-fb-settings .ags-layouts-dialog-page-import-options {
+    text-align : center;
+    /*	padding-top: 42px;*/
+}
+
+/*  ---------------------------------------------------------------- */
+/*                               Elementor
+/*  ---------------------------------------------------------------- */
+
+.elementor-templates-modal .ags-layouts-dialog {
+    background : transparent;
+    padding    : 0;
+    overflow   : visible;
+}
+
+.elementor-templates-modal .ags-layouts-dialog .ags-layouts-dialog-header {
+    /* Hide header in Elementor library */
+    display : none;
+}
+
+.elementor-templates-modal .ags-layouts-dialog-loader-overlay {
+    /* Change overlay color to match Elementor background */
+    background-color : rgba(241, 243, 245, 0.75) !important;
+}
+
+#elementor-template-library-modal #elementor-template-library-save-template-form {
+    flex-wrap : wrap;
+}
+
+#elementor-template-library-modal ul.ags-layouts-elem-save-options {
+    text-align    : left;
+    padding       : 20px;
+    display       : block;
+    font-size     : 16px;
+    background    : #ffffff;
+    border-radius : 3px;
+    width         : 100%;
+    margin        : 15px auto;
+    height        : auto;
+    max-width     : 650px;
+}
+
+#elementor-template-library-modal ul.ags-layouts-elem-save-options li {
+    margin-bottom : 10px;
+}
+
+#elementor-template-library-modal ul.ags-layouts-elem-save-options li:last-child {
+    margin-bottom : 0;
+}
+
+/*  ---------------------------------------------------------------- */
+/*                                      Beaver Builder
+/*  ---------------------------------------------------------------- */
+
+/* Add icon to Beaver Top Bar */
+
+.fl-builder-bar button.fl-builder-ags-layouts-import-button {
+    font-size           : 0 !important;
+    width               : 65px;
+    background-color    : #317873;
+    background-image    : url(../images/icon-layout-white.svg) !important;
+    background-size     : auto 30px;
+    background-position : center !important;
+    background-repeat   : no-repeat !important;
+}
+
+.fl-builder-bar button.fl-builder-ags-layouts-import-button:hover {
+    background-color : #5f9ea0;
+}
+
+/* Add "Save to WPL" icon */
+
+.ags-layouts-bb-module-save {
+    background-image    : url(../images/icon-layout-add-white.svg) !important;
+    background-size     : contain;
+    background-position : center;
+    background-repeat   : no-repeat;
+}
+
+/* Fix pseudo element added to h2 tag by BB */
+
+.fl-builder-edit .ags-layouts-dialog h1:before,
+.fl-builder-edit .ags-layouts-dialog h2:before {
+    display : none !important;
+}
+
+
+/* Fix font family  in dialogs */
+
+body #et-boc #et-fb-app .ags-layouts-dialog,
+.fl-builder-edit .ags-layouts-dialog {
+    font-family : 'Open Sans', sans-serif !important;
+    line-height : 1.6 !important;
+    font-weight : 400 !important;
+}
+
+.fl-builder-edit .ags-layouts-dialog button,
+.fl-builder-edit .ags-layouts-dialog input,
+.fl-builder-edit .ags-layouts-dialog select,
+.fl-builder-edit .ags-layouts-dialog h1,
+.fl-builder-edit .ags-layouts-dialog h2,
+.fl-builder-edit .ags-layouts-dialog h3,
+.fl-builder-edit .ags-layouts-dialog h4,
+.fl-builder-edit .ags-layouts-dialog h5,
+.fl-builder-edit .ags-layouts-dialog h6 {
+    font-family : 'Open Sans', sans-serif !important;
+}
+
+.fl-builder-edit .ags-layouts-dialog h1,
+.fl-builder-edit .ags-layouts-dialog h2,
+.fl-builder-edit .ags-layouts-dialog h3,
+.fl-builder-edit .ags-layouts-dialog h4,
+.fl-builder-edit .ags-layouts-dialog h5,
+.fl-builder-edit .ags-layouts-dialog h6 {
+    line-height : 1.3;
+}
+
+/*  ---------------------------------------------------------------- */
+/*                                      Gutenberg
+/*  ---------------------------------------------------------------- */
+
+.ags-layouts-gutenberg-import-block {
+    border-top    : 5px solid #317873;
+    background    : #f8f9fd;
+    box-shadow    : 0 2px 7px 0 rgba(0, 0, 0, 0.08);
+    text-align    : center;
+    padding       : 20px 20px 30px;
+    border-radius : 4px;
+}
+
+.ags-layouts-gutenberg-import-block p {
+    margin-top    : 0;
+    margin-bottom : 15px;
+    line-height   : 1.6;
+    font-size     : 18px;
+    font-family   : 'Open Sans', sans-serif !important;
+}
+
+/*
+ * 17 -   Site Exporter
+ */
+
+.ags-layouts-dialog-page-site-export .ags-layouts-dialog-body {
+    padding-top : 30px;
+}
+
+.ags-layouts-dialog-page-site-export .ags-layouts-dialog-buttons button {
+    min-width : 150px;
+}
+
+#ags-layouts-site-export form > label {
+    margin-bottom : 20px;
+}
+
+#ags-layouts-site-export-items {
+    margin-top : 25px;
+}
+
+#ags-layouts-site-export-items > li {
+    margin-bottom : 25px;
+}
+
+#ags-layouts-site-export-items li ul {
+    margin-top : 10px;
+}
+
+#ags-layouts-site-export-items li ul label {
+    font-weight : normal;
+}
+
+#ags-layouts-site-export-items li ul li {
+    margin-bottom : 10px;
+}
+
+#ags-layouts-site-export-items li ul {
+    margin-left   : 35px;
+    margin-bottom : 10px;
+}
+
+#ags-layouts-site-export-items label {
+    display : inline-block;
+}
+
+#ags-layouts-site-export-items label.full-size {
+    display : block;
+}
+
+#ags-layouts-site-export-status {
+    color       : #317873;
+    text-align  : center;
+    font-weight : bold;
+    font-size   : 18px;
+}
+
+#ags-layouts-site-export .ags-layouts-site-export-instructions {
+    margin     : 8px 0 0 35px;
+    font-size  : 13px;
+    font-style : italic;
+}
+
+#ags-layouts-site-export .ags-layouts-dialog-page-export-progress .ags-layouts-dialog-buttons button {
+    display : none;
+}
+
+/*
+ * 18 -   Site Export Packager
+ */
+
+#ags-layouts-site-export-packager form > label {
+    margin-bottom : 25px;
+}
+
+@media (min-width : 900px) {
+    #ags-layouts-site-export-packager .wp-editor-wrap {
+        margin-top : -25px;
+    }
+}
+
+#ags-layouts-site-export-packager-export {
+    margin-bottom : 25px;
+}
+
+#ags-layouts-site-export-packager-export label {
+    margin-bottom : 10px;
+}
+
+#ags-layouts-site-export-packager-export-list {
+    margin          : 0 0 0 5px;
+    list-style-type : none;
+}
+
+#ags-layouts-site-export-packager-export-list li {
+    margin   : 8px 30px 8px 0;
+    padding  : 8px 0 8px 30px;
+    position : relative;
+    overflow : hidden;
+    display  : inline-block;
+}
+
+#ags-layouts-site-export-packager-export-list li span,
+#ags-layouts-edit-site-importer-replacement-export span {
+    font-size : 15px;
+}
+
+#ags-layouts-site-export-packager-export-list .remove-item,
+#ags-layouts-edit-site-importer-replacement-export .remove-item {
+    position            : absolute;
+    left                : 0;
+    font-weight         : bold;
+    background-color    : #fae6e8;
+    width               : 20px;
+    height              : 20px;
+    display             : inline-block;
+    text-align          : center;
+    line-height         : 20px;
+    text-decoration     : none;
+    border-radius       : 5px;
+    background-image    : url(../images/close-red.svg);
+    background-repeat   : no-repeat;
+    background-size     : 25px;
+    background-position : center;
+}
+
+#ags-layouts-site-export-packager-export-list .remove-item {
+    top        : 50%;
+    margin-top : -10px;
+}
+
+#ags-layouts-edit-site-importer-replacement-export .remove-item {
+    top : 2px;
+}
+
+#ags-layouts-site-export-packager-export-list .remove-item:hover,
+#ags-layouts-edit-site-importer-replacement-export .remove-item:hover {
+    background-image : url(../images/close.svg);
+    background-color : #d0021b;
+}
+
+#ags-layouts-site-export-packager-button {
+    background-repeat   : no-repeat;
+    background-size     : 25px;
+    background-position : center;
+}
+
+#ags-layouts-site-export-packager-button[disabled] {
+    background-color : #317873 !important;
+    color            : transparent !important;
+    background-image : url(../images/spinner-white.svg);
+    cursor           : not-allowed;
+}
+
+#ags-layouts-site-export-packager-button[disabled]:hover {
+    background-color : #317873;
+    color            : transparent !important;
+    border-color     : #317873 !important;
+    box-shadow       : none !important;
+}
+
+/*
+ * 19 -   Site Importer
+ */
+
+#ags-demo-importer-form {
+    font-size : 14px;
+}
+
+#ags-demo-importer-form p {
+    font-size  : inherit;
+    margin-top : 0;
+}
+
+/* Hide heading */
+
+#ags-layouts-site-export .ags-layouts-dialog-header,
+#ags-layouts-site-import .ags-layouts-dialog-header {
+    display : none;
+}
+
+/*
+ *  20 -   Site Import Page
+ */
+
+#ags-layouts-site-import {
+    padding   : 30px 16px;
+    font-size : 16px;
+}
+
+#ags-layouts-site-import p {
+    font-size     : 15px;
+    margin-top    : 0;
+    margin-bottom : 1em;
+}
+
+#ags-layouts-site-import-image {
+    box-shadow : 0 2px 7px 0 rgba(0, 0, 0, 0.08);
+    display    : block;
+    width      : 100%;
+}
+
+#ags-layouts-site-import-continue-container {
+    margin-top : 20px;
+    display    : inline-block;
+}
+
+#ags-layouts-site-import-item {
+    border-radius      : 4px;
+    border             : solid 1px #dde2e5;
+    background-color   : #fff;
+    max-width          : 400px;
+    margin             : 15px 0;
+    overflow           : hidden;
+    -moz-box-shadow    : 0 7px 10px 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow : 0 7px 10px 0 rgba(0, 0, 0, 0.08);
+    box-shadow         : 0 7px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+#ags-layouts-site-import-item-name {
+    display     : block;
+    text-align  : center;
+    padding     : 15px;
+    margin      : 0;
+    font-weight : 600;
+    color       : #000;
+    font-size   : 17px;
+}
+
+#ags-layouts-site-import-select {
+    width : 100%;
+}
+
+/*** Demo importer start ***/
+
+#ags-demo-importer-messages {
+    max-width  : 600px;
+    width      : 100%;
+    height     : 200px;
+    overflow-y : auto;
+    text-align : left;
+    display    : none;
+}
+
+#ags-demo-importer-status {
+    max-width  : 600px;
+    width      : 100%;
+    margin     : 10px 0;
+    text-align : center;
+    padding    : 20px;
+    box-sizing : border-box;
+    display    : none;
+}
+
+#ags-demo-importer-status #ags-demo-importer-status-inprogress,
+#ags-demo-importer-status #ags-demo-importer-status-complete {
+    margin      : 0 0 20px 0;
+    font-size   : 27px;
+    font-weight : bold;
+    display     : none;
+    line-height : 1.3;
+}
+
+@media (max-width : 670px) {
+    #ags-demo-importer-status #ags-demo-importer-status-inprogress,
+    #ags-demo-importer-status #ags-demo-importer-status-complete {
+        font-size : 23px;
+    }
+}
+
+#ags-demo-importer-status #ags-demo-importer-complete-message,
+#ags-demo-importer-status #ags-demo-importer-error-message {
+    margin      : 20px 0 0 0;
+    font-size   : 16px !important;
+    font-weight : 600;
+    line-height : 1.6;
+}
+
+#ags-demo-importer-status #ags-demo-importer-complete-message {
+    color : #317873;
+}
+
+#ags-demo-importer-status #ags-demo-importer-error-message {
+    color : #d0021b;
+}
+
+#ags-demo-importer-progress {
+    position : relative;
+    width    : 130px;
+    height   : 130px;
+    margin   : 0 auto 25px;
+}
+
+#ags-demo-importer-progress strong {
+    position    : absolute;
+    left        : 0;
+    top         : 0;
+    width       : 130px;
+    line-height : 130px;
+    font-size   : 25px;
+    font-weight : bold;
+}
+
+#ags-demo-importer-status p#ags-demo-importer-messages {
+    font-weight : normal;
+    font-size   : 13px !important;
+    text-align  : left;
+}
+
+#ags-demo-importer-options {
+    margin-bottom  : 10px;
+    display        : flex;
+    flex-direction : column;
+    align-items    : flex-start
+}
+
+#ags-demo-importer-form #ags-demo-importer-options label {
+    margin-bottom : 10px;
+    display       : inline-block;
+    width         : auto;
+    font-size     : 15px;
+    line-height   : 25px;
+    position      : relative;
+    padding-left  : 35px;
+    cursor        : pointer;
+}
+
+#ags-demo-importer-form #ags-demo-importer-options label.ags-demo-data-version-label {
+    display      : block;
+    margin       : 0 0 20px 0;
+    padding-left : 0;
+    font-weight  : 700;
+}
+
+#ags-demo-importer-form #ags-demo-importer-options label.ags-demo-data-version-label select {
+    display        : inline-block;
+    vertical-align : middle;
+    font-weight    : normal;
+    margin         : 8px;
+    width          : auto;
+    padding-right  : 35px;
+    padding-left   : 15px;
+}
+
+@media (min-width : 500px) {
+    #ags-demo-importer-form #ags-demo-importer-options label.ags-demo-data-version-label select {
+        min-width : 130px;
+    }
+}
+
+#ags-demo-importer-form #ags-demo-importer-options label.ags-import-demo-label-all {
+    font-weight : 600;
+}
+
+#ags-demo-importer-form input[type=checkbox] {
+    border-width     : 1px;
+    background-color : #fff;
+    border-color     : #dde2e5;
+    border-radius    : 4px;
+    box-shadow       : none;
+    height           : 25px;
+    width            : 25px;
+    min-width        : 25px;
+    max-width        : 25px;
+    margin           : 0 5px 0 0;
+    position         : absolute;
+    left             : 0;
+    top              : 0;
+}
+
+#ags-demo-importer-form input[type=checkbox]:before {
+    margin     : 0 !important;
+    font-size  : 23px;
+    width      : 100%;
+    text-align : center;
+}
+
+#ags-demo-importer-form input[type=checkbox]:hover {
+    border-color : #317873;
+}
+
+#ags-demo-importer-form .button-primary {
+    font-size  : 16px;
+    display    : inline-block;
+    width      : auto;
+    text-align : center;
+    margin     : 0 auto;
+    border     : 2px solid;
+}
+
+#ags-demo-importer-form .button-primary:disabled,
+#ags-demo-importer-form .button-primary[disabled] {
+    background   : #e0dfdf !important;
+    border-color : #e0dfdf !important;
+    color        : #fff !important;
+}
+
+#ags-demo-importer-form .button-primary:disabled:hover,
+#ags-demo-importer-form .button-primary[disabled]:hover {
+    background   : #e0dfdf !important;
+    border-color : #e0dfdf !important;
+}
+
+#ags-demo-importer-messages {
+    margin-top    : 20px;
+    border        : 1px solid #e0dfdf;
+    padding       : 20px;
+    background    : #fff;
+    border-radius : 4px;
+}
+
+/*** Demo importer end ***/
+
+/*
+ * 21 - Edit Layout
+ */
+
+#ags-layouts-edit-site-importer-page {
+    padding : 30px 16px;
+}
+
+#ags-layouts-edit-site-importer-page p {
+    font-size : 14px;
+}
+
+#ags-layouts-edit-site-importer-page form {
+    margin-top : 30px;
+}
+
+#ags-layouts-edit-site-importer-replacement {
+    margin-bottom : 20px;
+}
+
+#ags-layouts-edit-site-importer-replacement label {
+    margin-bottom : 10px;
+    font-size     : 18px;
+}
+
+#ags-layouts-edit-site-importer-replacement-export {
+    position : relative;
+    overflow : hidden;
+    display  : block;
+}
+
+#ags-layouts-edit-site-importer-replacement-export span {
+    padding-left  : 30px;
+    margin-bottom : 15px;
+    display       : inline-block;
+}
+
+/* Admin notice AI Image Lab */
+
+.ags-layouts-aiil-notice {
+    background-color: #6A39E4;
+    color: #fff;
+    font-family: 'Montserrat';
+    padding: 30px 20px 20px;
+    margin: 10px 10px 0 10px;
+    border-radius: 16px;
+}
+.ags-layouts-aiil-notice-title {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+@media (max-width: 1550px) {
+    .ags-layouts-aiil-notice-title {
+        margin-bottom: 10px;
+    }
+}
+
+.ags-layouts-aiil-notice h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.7em;
+}
+
+.ags-layouts-aiil-notice a {
+    color: #FD925C;
+    font-weight: 600;
+}
+ 
+ .ags-layouts-aiil-notice p {
+     margin-top: 0;
+     margin-bottom: 5px;
+     line-height: 2em;
+ }
+
+.ags-layouts-aiil-notice  button.ags-layouts-aiil-notice-link {
+    padding: 4px 20px;
+    min-height: 50px;
+    min-width: 140px;
+    line-height: 1em;
+    border-radius: 29px;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.ags-layouts-aiil-notice  button.ags-layouts-aiil-notice-link:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.ags-layouts-aiil-notice .ags-layouts-aiil-notice-buttons {
+    margin: 10px 0;
+}
+
+.ags-layouts-aiil-notice  button.ags-layouts-aiil-notice-link.ags-layouts-aiil-notice-link-secondary {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.ags-layouts-aiil-notice  button.ags-layouts-aiil-notice-link.ags-layouts-aiil-notice-link-primary {
+    background-color: #FD925C;
+    border: 1px solid #FD925C;
+    color: #fff;
+}
+.ags-layouts-aiil-notice .ags-layouts-aiil-notice-content  {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
